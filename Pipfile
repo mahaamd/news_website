@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 django = "*"
+html5lib = "*"
+requests = "*"
+beautifulsoup4 = "*"
+lxml = "*"
 
 [dev-packages]
 

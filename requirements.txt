@@ -1,0 +1,12 @@
+Django
+djangorestframework
+celery
+django-celery-beat
+redis
+flower
+html5lib
+requests
+beautifulsoup4
+lxml
+django-extensions
+django-filter
