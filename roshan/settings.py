@@ -1,5 +1,6 @@
 from pathlib import Path
 from celery.schedules import crontab
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,6 +132,13 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': crontab(minute='*/3'),
     },
 }
+
+# CELERY_BEAT_SCHEDULE = {
+#     'collect-news-every-30-seconds': {
+#         'task': 'webscraping.tasks.collect_news_task',
+#         'schedule': timedelta(seconds=30),
+#     },
+# }
 
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
 
